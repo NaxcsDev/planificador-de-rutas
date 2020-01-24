@@ -1,0 +1,15 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	margin: auto;
+	text-align: center;
+}
+hr{
+	margin: 20px;
+}
+label,input,select,button{
+	display: block;
+}
+div{
+	margin: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planificador</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Planificador de Rutas</h1>
+		<nav>
+			<a href="planificador.html">planificador</a>
+			<a href="destinos.html">destinos</a>
+			<a href="pasajeros.html">pasajeros</a>
+		</nav>
+	</header>
+	<hr>
+	<div class="content">
+		<div class="pasajeros">
+			<h4>Pasajeros</h4>
+			<div class="fm-pasajeros">
+				<label for="input-pasajeros-cedula">cedula del pasajero</label>
+				<input type="text" id="input-pasajeros-cedula" placeholder="ingrese sus la cedula de pasajeros">
+				<label for="input-pasajeros">nombre del pasajero</label>
+				<input type="text" id="input-pasajeros" placeholder="ingrese sus pasajeros">
+				<label for="pasajeros-clasificacion">clasificacion</label>
+				<select name="" id="pasajeros-clasificacion">
+					<option value="1.- estudiante">1.- estudiante</option>
+					<option value="2.- obrero">2.- obrero</option>
+					<option value="3.- profesor">3.- profesor</option>
+					<option value="4.- otro">4.- otro</option>
+				</select>
+				<label for="pasajeros-destino">destino del pasajero</label>
+				<select name="" id="pasajeros-destino"></select>
+				<button id="btn-pasajeros" onclick="crear_pasajeros();">Ingresar</button>
+			</div>
+			<div class="lista-pasajeros-head">
+				<h4>lista de pasajeros</h4>
+				<div class="lista-pasajeros" id="lista-pasajeros"></div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<footer>
+		<p>Copyright - Jesús García</p>
+	</footer>
+	<script src="destinos.js"></script>
+	<script src="pasajeros.js"></script>
+</body>
+</html>
+<script>
+	window.onload = function(){
+		leer_pasajeros();
+		if (!localStorage) {alert("este navegador no soporta LocalStorage");}
+	}
+</script>

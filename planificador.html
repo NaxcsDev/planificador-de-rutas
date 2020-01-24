@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Planificador</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+	<header>
+		<h1>Planificador de Rutas</h1>
+		<nav>
+			<a href="planificador.html">planificador</a>
+			<a href="destinos.html">destinos</a>
+			<a href="pasajeros.html">pasajeros</a>
+		</nav>
+	</header>
+	<hr>
+	<div class="content">
+		<div class="planificar-destinos">
+			<h4>Planificar Destinos</h4>
+			<div class="lista-destinos-planificados" id="lista-destinos-planificados"></div>
+			<button onclick="destinos_rotar();">rotar</button>
+			<button onclick="destinos_guardar();">guardar estado</button>
+		</div>
+		<div class="planificar-pasajeros">
+			<h4>Planificar Pasajeros</h4>
+			<div id="lista-pasajeros-planificados"></div>
+			<button onclick="pasajeros_organizar();">organizar pasajeros</button>
+		</div>
+	</div>
+	<hr>
+	<footer>
+		<p>Copyright - Jesús García</p>
+	</footer>
+	<script src="planificador.js"></script>
+</body>
+</html>
+<script>
+	window.onload = function(){
+		if (!localStorage) {alert("este navegador no soporta LocalStorage");}
+	}
+</script>
